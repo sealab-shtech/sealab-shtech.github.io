@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>SEA Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/Logo_of_ShanghaiTech_University.svg" type="image/svg">
+</head>
+
+<style>
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 20px;
+  gap: 24px;
+}
+
+.project-teaser {
+  width: 300px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.project-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1976d2;
+}
+
+.project-authors,
+.project-publisher {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.project-links {
+    display: inline;
+    white-space: nowrap;
+    font-size: 1em;
+}
+.project-links a {
+    color: #388e3c;
+    text-decoration: none;
+    margin: 0 4px;
+    font-weight: 500;
+    display: inline;
+}
+.project-links a:hover {
+    text-decoration: underline;
+    color: #1b5e20;
+}
+.project-links a:first-child {
+    margin-left: 0;
+}
+.project-links a:last-child {
+    margin-right: 0;
+}
+
+
+@media (max-width: 700px) {
+  .project-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .project-teaser {
+    margin-bottom: 16px;
+  }
+}
+</style>
+
+<body>
+  <div class="nav">
+    <div class="nav-container">
+      <div class="nav-items">
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Research</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section>
+      <h2>Publications</h2>
+        <div class="projects-list">
+          <div class="project-item">
+            <img src="images/research/cast-teaser.png" alt="Project 1 Teaser" class="project-teaser">
+            <div class="project-info">
+              <div class="project-title">CAST: Component-Aligned 3D Scene Reconstruction from an RGB Image</div>
+              <div class="project-authors">Kaixin Yao*, Longwen Zhang*, Xinhao Yan, Yan Zeng, Qixuan Zhang, Wei Yang, Lan Xu, Jiayuan Gu, Jingyi Yu</div>
+              <div class="project-publisher">SIGGRAPH 2025 (Best Paper Award)</div>
+              <div class="project-links">
+                <a href="https://sites.google.com/view/cast4">Webpage</a> |
+                <a href="https://arxiv.org/abs/2502.12894">arXiv</a> 
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <img src="images/research/pointsam-outdoor-example.gif" alt="Project 2 Teaser" class="project-teaser">
+            <div class="project-info">
+              <div class="project-title">Point-SAM: Promptable 3D Segmentation Model for Point Clouds</div>
+              <div class="project-authors">Yuchen Zhou*, Jiayuan Gu*, Tung Yen Chiang, Fanbo Xiang, Hao Su</div>
+              <div class="project-publisher">ICLR 2025</div>
+              <div class="project-links">
+                <a href="https://point-sam.github.io/">Webpage</a> |
+                <a href="https://arxiv.org/abs/2406.17741">arXiv</a>|
+                <a href="https://github.com/zyc00/Point-SAM">Code</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+</body>
+
+</html>

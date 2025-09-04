@@ -1,54 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <title>ShanghaiTech Embodied AI Lab</title>
+  <title>SEA Lab</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/Logo_of_ShanghaiTech_University.svg" type="image/svg">
 </head>
+
+<style>
+/* People grid and card styles */
+.people-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.person-card {
+  background: #fff;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.07); */
+  /* padding: 20px 16px; */
+  width: 160px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.portrait {
+  width: 144px;
+  height: 144px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  background: #f0f0f0;
+}
+
+.person-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.person-name:hover,
+.person-name:hover a {
+  color: #0d47a1;
+}
+
+.person-role {
+  font-size: 0.98em;
+  color: #555;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .people-grid {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .person-card {
+    width: 90vw;
+    max-width: 320px;
+  }
+}
+</style>
 
 <body>
   <div class="nav">
     <div class="nav-container">
-      <a href="index.html">Home</a>
-      <a href="people.html">People</a>
-      <a href="publications.html">Publications</a>
+      <div class="nav-items">
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Research</a>
+      </div>
     </div>
   </div>
 
   <div class="container">
     <section>
-      <h2>Faculty</h2>
+      <h2>Lab Members</h2>
       <div class="people-grid">
         <div class="person-card">
-          <img src="images/professor.jpg" alt="Professor Name" class="profile-img">
-          <a href="https://homepage.example.com" class="person-name">Prof. Alice Zhang</a>
-          <div class="person-role">Professor</div>
+          <img src="images/people/GU Jiayuan.jpg" alt="Jiayuan Gu" class="portrait">
+          <div class="person-name"><a href="https://jiayuan-gu.github.io/" target="_blank">Jiayuan Gu</a></div>
+          <div class="person-role">Faculty</div>
+        </div>
+        <div class="person-card">
+          <img src="images/people/WANG Penghao.jpg" alt="Penghao Wang" class="portrait">
+          <div class="person-name"><a href="https://authoritywang.github.io/" target="_blank">Penghao Wang</a></div>
+          <div class="person-role">Ph.D. (2025)</div>
+        </div>
+        <div class="person-card">
+          <img src="images/people/placeholder-image-person-jpg.webp" alt="Zundong Ke" class="portrait">
+          <div class="person-name">Zundong Ke</div>
+          <div class="person-role">Master (2024)</div>
+        </div>
+        <div class="person-card">
+          <img src="images/people/YiyangHe.jpg" alt="Yiyang He" class="portrait">
+          <div class="person-name">Yiyang He</div>
+          <div class="person-role">Master (2025)</div>
+        </div>
+        <div class="person-card">
+          <img src="images/people/Li Xuebing.png" alt="Xuebing Li" class="portrait">
+          <div class="person-name">Xuebing Li</div>
+          <div class="person-role">Master (2025)</div>
+        </div>
+        <div class="person-card">
+          <img src="images/people/NIE Chuansen.png" alt="Chuansen Nie" class="portrait">
+          <div class="person-name">Chuansen Nie</div>
+          <div class="person-role">Master (2025)</div>
+        </div>
+        <div class="person-card">
+          <img src="images/people/ZHAO Boyi.png" alt="Boyi Zhao" class="portrait">
+          <div class="person-name">Boyi Zhao</div>
+          <div class="person-role">Master (2025)</div>
+        </div>
+        <div class="person-card">
+          <img src="images/people/JI Ran.jpg" alt="Ran Ji" class="portrait">
+          <div class="person-name">Ran Ji</div>
+          <div class="person-role">Undergrads</div>
         </div>
       </div>
 
-      <h2>Members</h2>
-      <div class="people-grid">
-        <div class="person-card">
-          <img src="images/phd1.jpg" alt="PhD Student Name" class="profile-img">
-          <a href="https://homepage.example.com" class="person-name">Bob Li</a>
-          <div class="person-role">Ph.D. Student</div>
-        </div>
-        <div class="person-card">
-          <img src="images/postdoc1.jpg" alt="Postdoc Name" class="profile-img">
-          <a href="https://homepage.example.com" class="person-name">Carol Wang</a>
-          <div class="person-role">Postdoc</div>
-        </div>
-      </div>
-      <h2>Undergraduate & Visiting Students</h2>
+      <h2>Undergrads & Visiting Students</h2>
+      <ul>
+        <li>Xin Lv</li>
+        <li>Jinxi Xiao (co-advised by Prof. Laurent Kneip) </li>
+        <li>Ye Yuan</li>
+        <li>Chenyu Lian</li>
+        <li>Haozhe Cui</li>
+        <li>Shenrui Wu</li>
+        <li>Hangxing Zhang</li>
+        <li>Jinze Wu</li>
+      </ul>
+
       <h2>Alumni</h2>
+      <h3>Visiting Students</h3>
+      <ul>
+        <li>Xuchuan Chen -- Ph.D. at Tsinghua University (w. Prof. Li Yi)</li>
+        <li>Zehui Zhao</li>
+      </ul>
     </section>
   </div>
-
-  <footer>
-    <p>&copy; ShanghaiTech Embodied AI Lab</p>
-  </footer>
 </body>
 
 </html>

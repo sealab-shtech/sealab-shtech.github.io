@@ -3,80 +3,87 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <title>ShanghaiTech Embodied AI Lab</title>
+  <title>SEA Lab</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
+<style>
+.news-list {
+  list-style-type: none; /* 去掉列表项前面的点 */
+  padding-left: 0;       /* 移除默认的左侧内边距 */
+}
+
+.news-list li {
+  margin-bottom: 0.75em; /* 为列表项之间增加一些垂直间距 */
+  display: flex;         /* 使用 flexbox 进行对齐 */
+  align-items: flex-start; /* 确保内容顶部对齐 */
+}
+
+.news-date {
+  color: #1976d2;           /* Blue shade for emphasis */
+  font-weight: bold;
+  display: inline-block;
+  flex-shrink: 0;        /* 防止日期部分被压缩 */
+  width: 8em;          /* 设置一个固定的宽度以保证对齐 */
+}
+</style>
 
 <body>
   <div class="nav">
     <div class="nav-container">
-      <a href="index.html">Home</a>
-      <a href="people.html">People</a>
-      <a href="publications.html">Publications</a>
+      <div class="nav-items">
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Research</a>
+      </div>
     </div>
   </div>
 
   <div class="container">
     <section class="group-intro">
-      <h2>ShanghaiTech Embodied AI (SEA) Lab</h2>
+      <h2>Scaled Embodied AI (SEA) Lab @ ShanghaiTech</h2>
+
       <div class="intro-content">
         <div class="intro-text">
-          <p>Welcome to the Embodied AI Lab at ShanghaiTech University. Our research focuses on [DESCRIBE MAIN RESEARCH AREAS, e.g., embodied intelligence, robotics, computer vision, etc.].</p>
-          
-          <p>Led by <strong>[LAB DIRECTOR NAME]</strong>, our team explores cutting-edge approaches to [SPECIFIC RESEARCH FOCUS]. We aim to [DESCRIBE LAB MISSION AND GOALS].</p>
-          
-          <p>Our lab collaborates with [MENTION IMPORTANT COLLABORATORS OR INDUSTRY PARTNERS] and is supported by [MENTION FUNDING SOURCES IF APPLICABLE].</p>
-        </div>
-        <div class="intro-image">
-          <img src="images/lab-photo.jpg" alt="ShanghaiTech Embodied AI Lab">
+          <p>Welcome to the <strong>Scaled Embodied AI (SEA) Lab</strong> at ShanghaiTech University, led by <strong>Prof. <a href="https://jiayuan-gu.github.io">Jiayuan Gu</a></strong>. We aim to advance the field of embodied artificial intelligence through innovative research and applications. Our research focuses on <strong>robotics and 3D vision</strong>, e.g., generalizable and generalist robot policies as well as interaction-oriented 3D understanding and generation.</p>
         </div>
       </div>
     </section>
     
     <!-- News -->
     <section>
-    <h2>News</h2>
-    <ul class="news-list">
+      <h2>News</h2>
+      
+      <ul class="news-list">
         <li>
-            <span class="news-date">October, 2023</span>
-            <span class="news-content">New paper accepted to CVPR 2024</span>
+          <span class="news-date">2025.6</span>
+          <span class="news-content">Our work <strong>CAST</strong> receives the SIGGRAPH 2025 Best Paper Award.</span>
         </li>
         <li>
-            <span class="news-date">August, 2023</span>
-            <span class="news-content">Lab received new research grant from NSFC</span>
+          <span class="news-date">2025.5</span>
+          <span class="news-content">We co-organize the workshop on <a href="https://human-robot-scene.github.io/">Human-Robot-Scene Interaction and Collaboration</a> at ICCV 2025.</span>
         </li>
         <li>
-            <span class="news-date">July, 2023</span>
-            <span class="news-content">Two new PhD students joined our lab</span>
+          <span class="news-date">2024.9</span>
+          <span class="news-content">The SEA Lab is founded.</span>
         </li>
-        <li>
-            <span class="news-date">June, 2023</span>
-            <span class="news-content">Our lab hosted the Embodied AI Workshop</span>
-        </li>
-        <li>
-            <span class="news-date">May, 2023</span>
-            <span class="news-content">Research collaboration started with University of Tokyo</span>
-        </li>
-    </ul>
+      </ul>
     </section>
     
     <section>
       <h2>Recent Talks</h2>
+
       <ul class="news-list">
-          <li>
-              <span class="news-date">September, 2023</span>
-              <span class="news-content">Talk on Embodied AI at CVPR 2024</span>
-          </li>
-          <li>
-              <span class="news-date">August, 2023</span>
-              <span class="news-content">Invited talk at the Robotics Summit</span>
-          </li>
+        <li>
+          <span class="news-date">2025.8.12</span>
+          <span class="news-content">Prof. Gu presented <strong>CAST</strong> at SIGGRAPH 2025.</span>
+        </li>
       </ul>
     </section>
   </div>
 
   <footer>
-    <p>&copy; ShanghaiTech Embodied AI Lab</p>
+    <p>&copy; Scaled Embodied AI (SEA) Lab</p>
   </footer>
 </body>
 
