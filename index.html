@@ -14,17 +14,42 @@
 }
 
 .news-list li {
-  margin-bottom: 0.75em; /* 为列表项之间增加一些垂直间距 */
   display: flex;         /* 使用 flexbox 进行对齐 */
   align-items: flex-start; /* 确保内容顶部对齐 */
+  margin-bottom: 0.75em; /* 为列表项之间增加一些垂直间距 */
+  gap: 16px;
 }
 
 .news-date {
-  color: #1976d2;           /* Blue shade for emphasis */
-  font-weight: bold;
-  display: inline-block;
-  flex-shrink: 0;        /* 防止日期部分被压缩 */
-  width: 8em;          /* 设置一个固定的宽度以保证对齐 */
+  color: #1976d2;
+  font-weight: 500;
+  flex: 0 0 8em;
+}
+
+.group-photo {
+  margin: 24px 0 0;
+}
+
+.group-photo img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.group-photo figcaption {
+  margin-top: 8px;
+  color: #666;
+  font-size: 0.95em;
+}
+
+@media (max-width: 600px) {
+  .news-list li {
+    gap: 10px;
+  }
+
+  .news-date {
+    flex-basis: 6.5em;
+  }
 }
 </style>
 
@@ -51,6 +76,11 @@
           <p>Welcome to the <strong>Scaled Embodied AI (SEA) Lab</strong> at ShanghaiTech University, led by <strong>Prof. <a href="https://jiayuan-gu.github.io">Jiayuan Gu</a></strong>. We aim to advance the field of embodied artificial intelligence through innovative research and applications. Our research focuses on <strong>robotics and 3D vision</strong>, e.g., generalizable and generalist robot policies as well as interaction-oriented 3D understanding and generation.</p>
         </div>
       </div>
+
+      <figure class="group-photo">
+        <img src="images/group2026.jpg" alt="SEA Lab group photo, 2026">
+        <figcaption>SEA Lab, 2026</figcaption>
+      </figure>
     </section>
     
     <!-- News -->
@@ -58,6 +88,10 @@
       <h2>News</h2>
       
       <ul class="news-list">
+        <li>
+          <span class="news-date">2026.2</span>
+          <span class="news-content">4 papers accepted at CVPR2026.</span>
+        </li>
         <li>
           <span class="news-date">2025.6</span>
           <span class="news-content">Our work <a href="https://sites.google.com/view/cast4">CAST</a> receives the SIGGRAPH 2025 Best Paper Award.</span>

@@ -13,59 +13,46 @@
 .people-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 28px;
   margin-bottom: 32px;
 }
 
 .person-card {
-  background: #fff;
-  /* border-radius: 12px; */
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.07); */
-  /* padding: 20px 16px; */
   width: 160px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .portrait {
   width: 144px;
   height: 144px;
   object-fit: cover;
-  border-radius: 16px;
+  object-position: center top;
+  border-radius: 8px;
   margin-bottom: 12px;
-  background: #f0f0f0;
+  background: #f4f6f8;
 }
 
 .person-name {
-  font-size: 1.1em;
-  font-weight: bold;
+  font-size: 1.05em;
+  font-weight: 500;
   color: #1976d2;
-  margin-bottom: 6px;
-  transition: color 0.2s;
-}
-
-.person-name:hover a {
-  color: #0d47a1;
+  margin-bottom: 4px;
 }
 
 .person-role {
-  font-size: 0.98em;
+  font-size: 0.95em;
   color: #555;
 }
 
 /* Responsive for mobile */
 @media (max-width: 600px) {
   .people-grid {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .person-card {
-    width: 90vw;
-    max-width: 320px;
+    justify-content: center;
+    gap: 22px;
   }
 }
 </style>
@@ -124,25 +111,41 @@
           <div class="person-role">Master (2025)</div>
         </div>
         <div class="person-card">
+          <img src="" alt="Jinxi Xiao" class="portrait">
+          <div class="person-name">Jinxi Xiao</div>
+          <div class="person-role">Master (2025)<br>with Prof. Laurent Kneip</div>
+        </div>
+        <div class="person-card">
           <img src="images/people/JI Ran.jpg" alt="Ran Ji" class="portrait">
           <div class="person-name">Ran Ji</div>
-          <div class="person-role">Undergrads</div>
+          <div class="person-role">Undergrad</div>
         </div>
-         <div class="person-card">
+        <div class="person-card">
+          <img src="" alt="Siyuan Xie" class="portrait">
+          <div class="person-name">Siyuan Xie</div>
+          <div class="person-role">Undergrad</div>
+        </div>
+        <div class="person-card">
           <img src="images/people/Yuqing Jiang.jpg" alt="Yuqing Jiang" class="portrait">
           <div class="person-name">Yuqing Jiang</div>
           <div class="person-role">RA</div>
         </div>
       </div>
 
-      <h2>Undergrads & Visiting Students</h2>
+      <h2>Undergrads</h2>
       <ul>
-        <li>Jinxi Xiao (co-advised by Prof. Laurent Kneip) </li>
         <li>Haozhe Cui</li>
         <li>Shenrui Wu</li>
         <li>Hangxing Zhang</li>
         <li>Jinze Wu</li>
+        <li>Junlin Chen</li>
+        <li>Jiayi Zhu</li>
+        <li>Kuanhao Xia</li>
+        <li>Lei Qian</li>
+        <li>Mingxi Li</li>
       </ul>
+
+      <!-- <h2>Visiting Students</h2> -->
 
       <h2>Alumni</h2>
       <h3>Visiting Students</h3>

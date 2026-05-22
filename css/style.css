@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -19,6 +23,14 @@ body {
 a {
     color: #0086e6;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -148,6 +160,10 @@ h3 {
     margin: auto;
     max-width: 1000px;
     padding: 40px 20px;
+}
+
+.container section + section {
+    margin-top: 36px;
 }
 
 footer {
