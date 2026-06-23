@@ -55,26 +55,42 @@
 }
 
 .project-links {
-    display: inline;
-    white-space: nowrap;
-    font-size: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 0.95em;
 }
+
 .project-links a {
-    color: #388e3c;
-    text-decoration: none;
-    margin: 0 4px;
-    font-weight: 500;
-    display: inline;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 5px 11px;
+  border: 1px solid rgba(25, 118, 210, 0.22);
+  border-radius: 999px;
+  background: #f7fbff;
+  color: #1769aa;
+  text-decoration: none;
+  font-size: 0.92em;
+  font-weight: 600;
+  line-height: 1;
+  transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
+
 .project-links a:hover {
-    text-decoration: underline;
-    color: #1b5e20;
+  border-color: rgba(25, 118, 210, 0.46);
+  background: #eaf4ff;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.13);
+  color: #0d47a1;
+  transform: translateY(-1px);
 }
-.project-links a:first-child {
-    margin-left: 0;
-}
-.project-links a:last-child {
-    margin-right: 0;
+
+.project-links a:focus-visible {
+  outline: 3px solid rgba(25, 118, 210, 0.25);
+  outline-offset: 2px;
 }
 
 
@@ -86,6 +102,9 @@
   }
   .project-teaser {
     margin-bottom: 16px;
+  }
+  .project-links {
+    justify-content: center;
   }
 }
 </style>
@@ -115,8 +134,8 @@
             <div class="project-title">SPREAD: Spatial-Physical REasoning via geometry Aware Diffusion</div>
             <div class="project-authors">Minzhang Li, Kuixiang Shao, Xuebing Li, Yuyang Jiao, Yinuo Bai, Hengan Zhou, Sixian Shen, Jiayuan Gu, Jingyi Yu</div>
             <div class="project-publisher">CVPR 2026</div>
-            <div class="project-links" style="color: gray;">
-              Links to be updated 
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2603.27573">arXiv</a>
             </div>
           </div>
         </div>
@@ -126,8 +145,8 @@
             <div class="project-title">Explicit Recovery Behavior for Diffusion Policies</div>
             <div class="project-authors">Zundong Ke, Junlin Chen, Jiayi Zhu, Kuanhao Xia, Boyi Zhao, Jiayuan Gu</div>
             <div class="project-publisher">CVPR 2026</div>
-            <div class="project-links" style="color: gray;">
-              Links to be updated 
+            <div class="project-links">
+              <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Ke_REACH_Explicit_Recovery_Behavior_for_Diffusion_Policies_CVPR_2026_paper.pdf">PDF</a>
             </div>
           </div>
         </div>
@@ -160,8 +179,10 @@
             <div class="project-authors">Penghao Wang, Yiyang He, Xin Lv, Yukai Zhou, Lan Xu, Jingyi Yu, Jiayuan Gu</div>
             <div class="project-publisher">NeurIPS 2025 (DB Track)</div>
             <div class="project-links">
-              <a href="https://authoritywang.github.io/partnext/">Webpage</a> |
-              <a href="https://arxiv.org/abs/2510.20155">arXiv</a>  
+              <a href="https://authoritywang.github.io/partnext/">Webpage</a>
+              <a href="https://arxiv.org/abs/2510.20155">arXiv</a>
+              <a href="https://github.com/AuthorityWang/PartNeXt">Code</a>
+              <a href="https://huggingface.co/datasets/AuWang/PartNeXt">HF Dataset</a>
             </div>
           </div>
         </div>
@@ -172,7 +193,7 @@
             <div class="project-authors">Kaixin Yao*, Longwen Zhang*, Xinhao Yan, Yan Zeng, Qixuan Zhang, Wei Yang, Lan Xu, Jiayuan Gu, Jingyi Yu</div>
             <div class="project-publisher">SIGGRAPH 2025 (Best Paper Award)</div>
             <div class="project-links">
-              <a href="https://sites.google.com/view/cast4">Webpage</a> |
+              <a href="https://sites.google.com/view/cast4">Webpage</a>
               <a href="https://arxiv.org/abs/2502.12894">arXiv</a> 
             </div>
           </div>
@@ -184,8 +205,8 @@
             <div class="project-authors">Yuchen Zhou*, Jiayuan Gu*, Tung Yen Chiang, Fanbo Xiang, Hao Su</div>
             <div class="project-publisher">ICLR 2025</div>
             <div class="project-links">
-              <a href="https://point-sam.github.io/">Webpage</a> |
-              <a href="https://arxiv.org/abs/2406.17741">arXiv</a>|
+              <a href="https://point-sam.github.io/">Webpage</a>
+              <a href="https://arxiv.org/abs/2406.17741">arXiv</a>
               <a href="https://github.com/zyc00/Point-SAM">Code</a> 
             </div>
           </div>
@@ -206,10 +227,10 @@
           <div class="project-info">
             <div class="project-title">Afforddp: Generalizable diffusion policy with transferable affordance</div>
             <div class="project-authors">Shijie Wu*, Yihang Zhu*, Yunao Huang, Kaizhen Zhu, Jiayuan Gu, Jingyi Yu, Ye Shi, Jingya Wang</div>
-           <div class="project-publisher">CVPR 2025</div>
+            <div class="project-publisher">CVPR 2025</div>
             <div class="project-links">
-              <a href="https://afforddp.github.io/">Webpage</a> |
-              <a href="https://arxiv.org/abs/2412.03142">arXiv</a>|
+              <a href="https://afforddp.github.io/">Webpage</a>
+              <a href="https://arxiv.org/abs/2412.03142">arXiv</a>
               <a href="https://github.com/SshiJwu/AffordDP">Code</a> 
             </div>
           </div>
