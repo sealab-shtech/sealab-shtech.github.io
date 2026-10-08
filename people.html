@@ -9,12 +9,28 @@
 </head>
 
 <style>
+.people-section {
+  margin-bottom: 36px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section-heading h2,
+.section-heading h3 {
+  margin-bottom: 0;
+}
+
 /* People grid and card styles */
 .people-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 28px;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 
 .person-card {
@@ -48,11 +64,31 @@
   color: #555;
 }
 
+.name-list {
+  columns: 2;
+  column-gap: 48px;
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.name-list li {
+  break-inside: avoid;
+  margin-bottom: 6px;
+}
+
 /* Responsive for mobile */
 @media (max-width: 600px) {
   .people-grid {
     justify-content: center;
     gap: 22px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .name-list {
+    columns: 1;
   }
 }
 </style>
@@ -72,14 +108,17 @@
   </div>
 
   <div class="container">
-    <section>
-      <h2>Lab Members</h2>
+    <section class="people-section">
+      <div class="section-heading">
+        <h2>Lab Members</h2>
+      </div>
       <div class="people-grid">
         <div class="person-card">
           <img src="images/people/GU Jiayuan.jpg" alt="Jiayuan Gu" class="portrait">
           <div class="person-name"><a href="https://jiayuan-gu.github.io/" target="_blank">Jiayuan Gu</a></div>
-          <div class="person-role">Faculty</div>
+          <div class="person-role">Principal Investigator (PI)</div>
         </div>
+
         <div class="person-card">
           <img src="images/people/WANG Penghao.jpg" alt="Penghao Wang" class="portrait">
           <div class="person-name"><a href="https://authoritywang.github.io/" target="_blank">Penghao Wang</a></div>
@@ -111,7 +150,7 @@
           <div class="person-role">Master (2025)</div>
         </div>
         <div class="person-card">
-          <img src="images\people\XIAO Jinxi-2.jpg" alt="Jinxi Xiao" class="portrait">
+          <img src="images/people/XIAO Jinxi-2.jpg" alt="Jinxi Xiao" class="portrait">
           <div class="person-name">Jinxi Xiao</div>
           <div class="person-role">Master (2025)<br>with Prof. Laurent Kneip</div>
         </div>
@@ -121,7 +160,7 @@
           <div class="person-role">Master (2026)</div>
         </div>
         <div class="person-card">
-          <img src="images\people\XIE Siyuan-2.jpg" alt="Siyuan Xie" class="portrait">
+          <img src="images/people/XIE Siyuan-2.jpg" alt="Siyuan Xie" class="portrait">
           <div class="person-name">Siyuan Xie</div>
           <div class="person-role">Master (2026)</div>
         </div>
@@ -136,9 +175,13 @@
           <div class="person-role">RA</div>
         </div>
       </div>
+    </section>
 
-      <h2>Undergrads</h2>
-      <ul>
+    <section class="people-section">
+      <div class="section-heading">
+        <h2>Undergrads</h2>
+      </div>
+      <ul class="name-list">
         <li>Zitian Yang (2025)</li>
         <li>Kuanhao Xia (2024)</li>
         <li>Lei Qian (2024)</li>
@@ -151,11 +194,14 @@
         <li>Jiayi Zhu (2023)</li>
         <li>Sitong Liu (2023)</li>
       </ul>
+    </section>
 
-      <h2>Visiting Students</h2>
-
-      <h2>Alumni</h2>
-      <ul>
+    <section class="people-section">
+      <div class="section-heading">
+        <h2>Alumni</h2>
+      </div>
+      <h3>Visiting Students</h3>
+      <ul class="name-list">
         <li>Jinze Wu (2022 Undergrad)</li>
         <li>Junlin Chen (2022 Undergrad)</li>
         <li>Ye Yuan (2024 Master)</li>

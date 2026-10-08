@@ -5,53 +5,87 @@
   <meta charset="utf-8">
   <title>SEA Lab</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/Logo_of_ShanghaiTech_University.svg" type="image/svg">
-</head>
+  <link rel="icon" href="images/Logo_of_ShanghaiTech_University.svg" type="image/svg+xml">
 
 <style>
+.research-page {
+  background: #f7f9fc;
+  color: #243142;
+}
+
+.research-page .container {
+  max-width: 1120px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.research-page .nav-items a[aria-current="page"] {
+  color: #1976d2;
+  font-weight: 500;
+}
+
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 .project-item {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  align-items: center;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 20px;
-  gap: 24px;
+  border: 1px solid #e4e9f0;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(31, 45, 61, 0.055);
+  padding: 18px;
+  gap: 26px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-item:hover {
+  border-color: #d5dee9;
+  box-shadow: 0 12px 30px rgba(31, 45, 61, 0.09);
+  transform: translateY(-2px);
 }
 
 .project-teaser {
-  width: 300px;
-  height: 135px;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #f0f0f0;
-  flex-shrink: 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 9px;
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  min-width: 0;
 }
 
 .project-title {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #1976d2;
+  margin: 8px 0 7px;
+  color: #15243a;
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.35;
 }
 
-.project-authors,
+.project-authors {
+  color: #596579;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
 .project-publisher {
-  font-size: 1em;
-  color: #555;
-  margin-bottom: 6px;
+  order: -1;
+  color: #1769aa;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .project-links {
@@ -59,22 +93,21 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin-top: 8px;
-  font-size: 0.95em;
+  margin-top: 14px;
 }
 
 .project-links a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: 30px;
-  padding: 5px 11px;
+  min-height: 32px;
+  padding: 6px 12px;
   border: 1px solid rgba(25, 118, 210, 0.22);
   border-radius: 999px;
   background: #f7fbff;
   color: #1769aa;
   text-decoration: none;
-  font-size: 0.92em;
+  font-size: 0.84rem;
   font-weight: 600;
   line-height: 1;
   transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease, transform 0.18s ease;
@@ -93,23 +126,50 @@
   outline-offset: 2px;
 }
 
+@media (max-width: 860px) {
+  .project-item {
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 22px;
+  }
+}
 
 @media (max-width: 700px) {
+  .research-page .container {
+    padding-top: 32px;
+    padding-bottom: 44px;
+  }
+
+  .research-header {
+    margin-bottom: 22px;
+  }
+
   .project-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 18px;
+    padding: 14px;
   }
+
   .project-teaser {
-    margin-bottom: 16px;
+    max-height: 260px;
   }
-  .project-links {
-    justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-item,
+  .project-links a {
+    transition: none;
+  }
+
+  .project-item:hover,
+  .project-links a:hover {
+    transform: none;
   }
 }
 </style>
+</head>
 
-<body>
+<body class="research-page">
   <div class="nav">
     <div class="nav-container">
       <div class="nav-logo">
@@ -118,18 +178,16 @@
       <div class="nav-items">
         <a href="index.html">Home</a>
         <a href="people.html">People</a>
-        <a href="research.html">Research</a>
+        <a href="research.html" aria-current="page">Research</a>
       </div>
     </div>
   </div>
 
   <div class="container">
     <section>
-      <!-- <h2>Publications</h2> -->
-      
       <div class="projects-list">
         <div class="project-item">
-          <img src="images\research\XDen1K-teaser.png" alt="XDen1K" class="project-teaser">
+          <img src="images/research/XDen1K-teaser.png" alt="XDen1K" class="project-teaser">
           <div class="project-info">
             <div class="project-title">XDen-1K: A Density Field Dataset of Real-World Objects</div>
             <div class="project-authors">Jingxuan Zhang*, Tianqi Yu*, Yatu Zhang*, Jinze Wu, Kaixin Yao, Jingyang Liu, Yuyao Zhang, Jiayuan Gu, Jingyi Yu</div>
@@ -153,7 +211,7 @@
           </div>
         </div>
         <div class="project-item">
-          <img src="images/research/Explicit Recovery Behavior.png" alt="REACH" class="project-teaser">
+          <img src="images/research/Explicit%20Recovery%20Behavior.png" alt="REACH" class="project-teaser">
           <div class="project-info">
             <div class="project-title">REACH: Explicit Recovery Behavior for Diffusion Policies</div>
             <div class="project-authors">Zundong Ke, Junlin Chen, Jiayi Zhu, Kuanhao Xia, Boyi Zhao, Jiayuan Gu</div>
@@ -164,12 +222,14 @@
           </div>
         </div>
         <div class="project-item">
-          <img src="images\research\artllm_teaser_lowres.png" alt="ArtLLM" class="project-teaser">
+          <img src="images/research/artllm_teaser_lowres.png" alt="ArtLLM" class="project-teaser">
           <div class="project-info">
             <div class="project-title">ArtLLM: Generating Articulated Assets via 3D LLM</div>
             <div class="project-authors">Penghao Wang, Siyuan Xie, Hongyu Yan, Xianghui Yang, Jingwei Huang, Chunchao Guo, Jiayuan Gu</div>
             <div class="project-publisher">CVPR 2026</div>
             <div class="project-links">
+              <a href="https://authoritywang.github.io/artllm/">Webpage</a>
+              <a href="https://github.com/AuthorityWang/ArtLLM">Code</a>
               <a href="https://arxiv.org/abs/2603.01142">arXiv</a>  
             </div>
           </div>
@@ -224,7 +284,7 @@
             </div>
           </div>
         </div>
-           <div class="project-item">
+        <div class="project-item">
           <img src="images/research/exface-teaser.png" alt="ExFace" class="project-teaser">
           <div class="project-info">
             <div class="project-title">ExFace: Expressive Facial Control for Humanoid Robots with Diffusion Transformers and Bootstrap Training</div>
@@ -235,7 +295,7 @@
             </div>
           </div>
         </div>
-           <div class="project-item">
+        <div class="project-item">
           <img src="images/research/afforddp-teaser.png" alt="AffordDP" class="project-teaser">
           <div class="project-info">
             <div class="project-title">Afforddp: Generalizable diffusion policy with transferable affordance</div>
